@@ -12,9 +12,9 @@ if(@isset($_SESSION['lxwuserid'])){
     while($row = mysql_fetch_array($res)){
     	$admins[] = $row;
     }
-    require_once 'smarty4hiyi.php';
-    $smarty->assign("admins",$admins);
-    $smarty->display("admin_list.tpl");
+    require_once 'tplConf.php';
+    $view->assign("admins",$admins);
+    $view->display("admin_list.php");
 }else{
 	header("Location:index.php");
 }

@@ -87,8 +87,8 @@ if(strtolower($_SERVER['REQUEST_METHOD']) == 'post'){
     
     header("Location:index.php");
 }else{
-    require_once "smarty4hiyi.php";
-    $smarty->display("add.tpl");
+    require_once "tplConf.php";
+    $view->display("add.php");
 }
 }else{
     header("Location:index.php");

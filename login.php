@@ -18,9 +18,10 @@ if(strtolower($_SERVER['REQUEST_METHOD']) == 'post'){
 	}else{
 		echo "The account doesn't exist!";
 	}
-	header("Refresh:1;url=index.php");
+	echo '<meta http-equiv="refresh" content="1;url=index.php" />';
+	//header("Refresh:1;url=index.php");
 }else{
-	require_once "smarty4hiyi.php";
-    $smarty->display("login.tpl");
+	require_once "tplConf.php";
+	$view->display("login.php");
 }
 ?>

@@ -37,8 +37,8 @@ if(strtolower($_SERVER['REQUEST_METHOD']) == 'post'){
 	    header("Location:admin_list.php");
     }
 }else{
-	require_once 'smarty4hiyi.php';
-	$smarty->display("admin_add.tpl");
+	require_once 'tplConf.php';
+	$view->display("admin_add.php");
 }
 }else{
 	header("Location:index.php");

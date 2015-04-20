@@ -2,7 +2,7 @@
 
 require_once 'SqlTools.php';
 
-require_once 'smarty4hiyi.php';
+require_once 'tplConf.php';
 
 $sqlTools = new SqlTools();
 
@@ -65,11 +65,11 @@ while($option = mysql_fetch_row($res)){
 }
 mysql_free_result($res);
 mysql_close();
-$smarty->assign("lxwuser",$user);
-$smarty->assign("groupname",$ggroup);
-$smarty->assign("achievementcount",$achievementcount);
-$smarty->assign("options",$options);
-$smarty->assign("list",$rows);
-$smarty->display("index.tpl");
+$view->assign("lxwuser",$user);
+$view->assign("groupname",$ggroup);
+$view->assign("achievementcount",$achievementcount);
+$view->assign("options",$options);
+$view->assign("list",$rows);
+$view->display("index.php");
                 
 ?>
